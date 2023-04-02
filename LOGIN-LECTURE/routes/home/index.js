@@ -8,15 +8,12 @@
 const express = require("express");
 const router = express();
 
-router.get("/", (req, res) => {
-    // 루트 요청이 들어오면 기능이 동작된다
-    res.render("home/index");
-});
+// controller impoert
+const ctrl = require("./home.ctrl");
 
-router.get("/login", (req, res) => {
-    // login 요청이 들어오면 기능이 동작된다
-    res.render("home/login");
-});
+router.get("/", ctrl.home);
+
+router.get("/login", ctrl.login);
 
 // app.js에서 라우터를 사용할 수 있도록 내보내줘야한다
 module.exports = router;
