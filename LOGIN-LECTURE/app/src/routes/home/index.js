@@ -12,7 +12,6 @@ const router = express();
 const ctrl = require("./home.ctrl");
 
 router.get("/", ctrl.home);
-
 router.get("/login", ctrl.login);
 
 // app.js에서 라우터를 사용할 수 있도록 내보내줘야한다
